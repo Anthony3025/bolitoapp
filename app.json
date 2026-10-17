@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "Bolito",
+    "slug": "bolito-mvp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": false,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.bolito.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Bolito necesita acceso a la cámara para escanear QRs y verificar tu identidad.",
+        "NSFaceIDUsageDescription": "Usa FaceID para ingresar a tu billetera de forma segura.",
+        "NSLocationWhenInUseUsageDescription": "Necesitamos tu ubicación para mostrar Puntos Bolito cercanos."
+      },
+      "config": {
+        "googleMapsApiKey": "AIzaSyAnYstritrIdmCs7dYTxAmLSpwqXPJU01A"
+      }
+    },
+    "android": {
+      "package": "com.bolito.app",
+      "navigationBar": {
+        "backgroundColor": "#0a1128",
+        "barStyle": "light-content"
+      },
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "CAMERA",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "USE_BIOMETRIC"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAnYstritrIdmCs7dYTxAmLSpwqXPJU01A"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-asset",
+      "expo-font",
+      "expo-sqlite",
+      [
+        "react-native-vision-camera",
+        {
+          "cameraPermissionText": "Bolito necesita acceso a la cámara para transacciones ultra-rápidas.",
+          "enablePhotosPermission": true,
+          "enableCodeScanner": true
+        }
+      ]
+    ]
+  }
+}

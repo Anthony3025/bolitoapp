@@ -1,0 +1,2 @@
+[functions.verify-kyc]
+verify_jwt = false
